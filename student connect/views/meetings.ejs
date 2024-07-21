@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongoing and Completed Meetings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <ul class="navbar-links">
+                <li> <a href="/home">Home</a> </li>
+                <li> <a href="/syllabus">Syllabus</a> </li>
+                <li> <a href="/notes">Notes</a> </li>
+                <li> <a href="/doubt">Doubts</a> </li>
+                <li> <a href="/white">Become an Instructor</a> </li>
+                <li class="active"> <a href="/meetings">Meetings</a> </li>
+            </ul>
+            <div class="navbar-search-login">
+                <!-- Add search and login functionality if needed -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-content">
+            <h1>Ongoing and Completed Meetings</h1>
+            <div class="meeting-links">
+                <% if (links.length > 0) { %>
+                    <ul>
+                        <% links.forEach(link => { %>
+                            <li><a href="<%= link.name %>" target="_blank"><%= link.name %></a></li>
+                        <% }) %>
+                    </ul>
+                <% } else { %>
+                    <p>No meetings available.</p>
+                <% } %>
+            </div>
+        </div>
+    </main> 
+    <footer>
+        <div class="newsletter">
+            <h2>Newsletter</h2>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in</p>
+        </div>
+        <div class="footer-content">
+            <div class="contact-us">
+                <h3>Contact us</h3>
+                <p><i class="fa fa-map-marker"></i> London 145, United Kingdom</p>
+                <p><i class="fa fa-envelope"></i> demo@gmail.com</p>
+                <p><i class="fa fa-phone"></i> +12586954775</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+            </div>
+            <div class="courses">
+                <h3>Courses</h3>
+                <ul>
+                    <li>Masters Degree</li>
+                    <li>Post Graduate</li>
+                    <li>Undergraduate</li>
+                    <li>Engineering</li>
+                    <li>Ph.D Degree</li>
+                </ul>
+            </div>
+            <div class="information">
+                <h3>Information</h3>
+                <ul>
+                    <li>Campus Tour</li>
+                    <li>Student Life</li>
+                    <li>Scholarship</li>
+                    <li>Admission</li>
+                    <li>Leadership</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <img src="logo.png" alt="Mind Educations Logo">
+            <p>Copyright © 2019 Design by Free Html Templates</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Page</title>
+    <link rel="stylesheet" href="question.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <ul class="navbar-links">
+                <li class="active"> <a href="/home">Home</a> </li>
+                      <li> <a href="/syllabus">Syllabus</a> </li>
+                      <li> <a href="/syllabus">Notes</a> </li>
+                      
+                      <li> <a href="/myquestion">my question</a> </li>
+                      <li> <a href="/white">live session</a> </li>
+            </ul>
+            <div class="navbar-search-login">
+                <button><a href="/askdoubt">ask doubt</a></button>
+                
+            </div>
+        </nav>
+    </header>
+    <div class="container1">
+       
+        <main>
+            <div class="content">
+                
+                <div class="questions">
+                    <% data.forEach(q=>{ %>
+                        <a href="question/<%= q.id %>">
+                        <div class="question-card">
+                            
+                            <div class="question-content">
+                                <h2><%= q.question %></h2>
+                                <p>Discover the revolutionary technology of blockchain and its impact on digital currencies like Bitcoin.</p>
+                                <div class="question-footer">
+                                    <span>posted by <strong><%= q.name %></strong> in <%= q.sem %> semseter</span>
+                                    <span class="comments"><i class="fa fa-comment"></i> 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                   <% }) %>
+
+                
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
